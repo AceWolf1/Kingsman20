@@ -128,5 +128,29 @@
     <Folder Include="Pages\" />
     <Folder Include="Res\" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Stack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\Login\Stack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\Login\cкелет.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\Login\козырьки.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\Login\небо.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\Login\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\Login\кинг.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Windows\Login\кинг1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
