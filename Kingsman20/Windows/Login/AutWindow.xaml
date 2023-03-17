@@ -32,7 +32,7 @@
                      FontSize="18"
                      FontWeight="Black"
                      Width="240"
-                     Height="30" Foreground="White" Background="#FFC1C1C1"/>
+                     Height="30" Foreground="Black" Background="#FFC1C1C1"/>
             <TextBlock Text="Password"
                        FontSize="22"
                        FontWeight="Bold"
@@ -42,14 +42,14 @@
                      FontSize="18"
                      FontWeight="Black"
                      Width="240"
-                     Height="30" Foreground="White" Background="#FFC1C1C1"
+                     Height="30" Foreground="Black" Background="#FFC1C1C1"
                      />
             <Button x:Name="Vxod"
                     Content="Sign in"
                     FontSize="20"
                     Width="250"
                     Height="50"
-                    Margin="0 30 0 0" Background="#FFC1C1C1"/>
+                    Margin="0 30 0 0" Background="#FFC1C1C1" Click="BtnSigIn_Click"/>
             <TextBlock Text="Create User"
                        FontWeight="Black"
                        HorizontalAlignment="Center"

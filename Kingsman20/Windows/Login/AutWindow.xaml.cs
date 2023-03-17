@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kingsman20.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,28 @@ namespace Kingsman20.Windows.Login
         public AutWindow()
         {
             InitializeComponent();
+
+        }
+
+        private void BtnSigIn_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            var userAuth = ClassHelper.EF.Context.Staff.ToList().
+                Where(i => i.Email == Login.Text && i.Password == Password.Text).
+                FirstOrDefault();
+
+            if (userAuth != null)
+            {
+                MainWindow serviceWindow = new MainWindow();                
+                serviceWindow.Show();
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }
