@@ -36,25 +36,31 @@ namespace Kingsman20.Windows.Login
 
         }
 
-        //private void BtnSigIn_Click(object sender, RoutedEventArgs e)
-        //{
+        private void Login_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
 
 
-        //    //var userAuth = ClassHelper.EF.Context.Staff.ToList().
-        //    //    Where(i => i.Email == Login.Text && i.Password == Password.Text).
-        //    //    FirstOrDefault();
+        private void BtnSigIn_Click(object sender, RoutedEventArgs e)
+        {
 
-        //    if (userAuth != null)
-        //    {
-        //        MainWindow serviceWindow = new MainWindow();                
-        //        serviceWindow.Show();
-        //        this.Close();
 
-        //    }
-        //    else
-        //        //    {
-        //        //        MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-        //        //    }
-        //        }
+            var userAuth = ClassHelper.EF.Context.Staff.ToList().
+                Where(i => i.Email == Login.Text && i.Password == Password.Password).
+                FirstOrDefault();
+
+            if (userAuth != null)
+            {
+                MainWindow serviceWindow = new MainWindow();
+                serviceWindow.Show();
+                this.Close();
+
+            }
+            else
+            {
+                MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }

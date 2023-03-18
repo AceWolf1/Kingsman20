@@ -233,6 +233,8 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Resource Include="Res\человек.png" />
+    <Resource Include="Res\kingPng.png" />
     <Resource Include="Res\фон1.jpg" />
     <Resource Include="Res\ключ.png" />
     <Resource Include="Res\фон.jpg" />

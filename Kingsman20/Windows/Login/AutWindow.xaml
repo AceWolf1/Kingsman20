@@ -5,57 +5,95 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kingsman20.Windows.Login"
         mc:Ignorable="d"
-        Title="AutWindow" Height="700" Width="700">
+        WindowStartupLocation="CenterScreen"
+        MaxHeight="800"
+        MinHeight="800"
+        MaxWidth="700"
+        MinWidth="700"
+        
+        Title="AutWindow" Height="800" Width="700">
+ 
     <Grid>
-        <StackPanel Margin="0,0,0,0">
-            <StackPanel.Background>
-                <ImageBrush ImageSource="/Res/фон1.jpg"/>
-            </StackPanel.Background>
-            <TextBlock Text="Kingsman" TextAlignment="Center" Width="340" Height="100" HorizontalAlignment="Center" FontSize="72" FontWeight="Bold" FontFamily="Impact" IsEnabled="False"
-                       >
-                <TextBlock.Foreground>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#FFD4C563" Offset="0.157"/>
-                        <GradientStop Color="White" Offset="1"/>
-                        <GradientStop Color="#FF6D0D4B" Offset="1"/>
-                        <GradientStop Color="#FFFFB616" Offset="0.977"/>
-                        <GradientStop Color="#FFFB7979" Offset="0.96"/>
-                    </LinearGradientBrush>
-                </TextBlock.Foreground>
-            </TextBlock>
-           
-            <TextBlock Text="Login"
-                       FontSize="22"
-                       FontWeight="Bold"
-                       HorizontalAlignment="Center"
-                       Margin="0 200 0 0" Foreground="Black"/>
-            <TextBox x:Name="Login"
-                     FontSize="18"
-                     FontWeight="Black"
-                     Width="240"
-                     Height="30" Foreground="Black" Background="#FFC1C1C1" TextChanged="Login_TextChanged"/>
-            <TextBlock Text ="Password"
-                       FontSize="22"
-                       FontWeight="Bold"
-                       HorizontalAlignment="Center"
-                       Margin="0 20 0 0" Foreground="Black"/>
-            <PasswordBox x:Name="Password"
-                     FontSize="18"
-                     FontWeight="Black"
-                     Width="240"
-                     Height="30" Foreground="Black" Background="#FFC1C1C1"
-                     />
-            <Button x:Name="Vxod"
-                    Content="Sign in"
-                    FontSize="20"
-                    Width="250"
-                    Height="50"
-                    Margin="0 30 0 0" Background="#FFC1C1C1" Click="Vxod_Click"/>
-            <!--Click="BtnSigIn_Click"-->
-            <TextBlock Text="Create User"
-                       FontWeight="Black"
-                       HorizontalAlignment="Center"
-                       Margin="0 60 0 0" Foreground="White" FontFamily="Roboto" FontSize="14"/>
-        </StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="313*"/>
+            <ColumnDefinition Width="187*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="50"/>
+        
+
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Res/фон1.jpg" Opacity="0.4"/>
+        </Grid.Background>
+        <Image x:Name="Logo" Source="/Res/kingPng.png" Grid.Column="1" Margin="50,0,63,0"/>
+        <Image x:Name="Человек" Source="/Res/человек.png" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Right" Margin="0,0,0,0" Width="50"/>
+        <Image x:Name="Ключ" Source="/Res/ключ.png" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Right" Margin="0, 0 ,0 ,0" Width="50"/>
+        <TextBlock Grid.Row="1" Text="Kingsman"
+                   FontSize="72"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center" FontFamily="Impact" Grid.Column="1" Width="308">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FF040404" Offset="0.017"/>
+                    <GradientStop Color="#FECECCCC" Offset="0.98"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <TextBlock Text="Авторизация" Grid.Row="3" Grid.Column="1"
+                   FontSize="25"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center" Width="160" Height="50" />
+        <TextBlock Text="Login" Grid.Row="4" Grid.Column="1"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Left" Width="58"  
+                   Margin="0 15 0 0"/>
+        <TextBox x:Name="Login" Grid.Row="5" Grid.Column="1"
+                 FontSize="18"   
+                 Width="313"
+                 HorizontalAlignment="Left"
+                 Background="#FFCECDCD" TextChanged="Login_TextChanged_1" FontFamily="Calibri" />
+        <TextBlock Text="Password" Grid.Row="6" Grid.Column="1"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Left" Width="97"
+                   Margin="0 15 0 0"/>
+        <PasswordBox x:Name="Password" Grid.Row="7" Grid.Column="1"
+                 FontSize="18"
+                 Width="313"
+                 FontWeight="Black"
+                 HorizontalAlignment="Left" Background="#FFCECDCD"/>
+        <TextBlock Text="Забыли пароль?" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="8" 
+                 FontSize="11" 
+                 FontStyle="Italic" 
+                 Margin="0,0,0,0" 
+                 FontWeight="Bold"/>
+        <Button x:Name="Vxod" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Center"
+                Content="Sign in"
+                FontSize="20"
+                Width="250"
+                Height="50"
+                Margin="0 0 0 0" Background="#FFC1C1C1" Click="Vxod_Click"/> 
+        <Button x:Name="Registr" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Center"
+                Content="Registration"
+                FontSize="20"
+                Width="250"
+                Height="50"
+                Margin="0 0 0 0" Background="#FFC1C1C1" Click="Vxod_Click"/> 
     </Grid>
 </Window>
