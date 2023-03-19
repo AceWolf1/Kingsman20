@@ -62,5 +62,12 @@ namespace Kingsman20.Windows.Login
                 MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void Reg_Click(object sender, RoutedEventArgs e)
+        {
+          this.Hide();
+          RegWindow registerForm = new RegWindow();
+            registerForm.Show();
+        }
     }
 }

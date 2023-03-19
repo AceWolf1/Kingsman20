@@ -23,5 +23,12 @@ namespace Kingsman20.Windows.Login
         {
             InitializeComponent();
         }
+
+        private void VxodReg_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            AutWindow autWindow = new AutWindow();
+            autWindow.Show();
+        }
     }
 }

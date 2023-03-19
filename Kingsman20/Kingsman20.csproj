@@ -79,9 +79,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Windows\Registration\Registation.xaml.cs">
-      <DependentUpon>Registation.xaml</DependentUpon>
-    </Compile>
     <Page Include="Windows\Cabinet\AdminPersonalCabinet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -181,10 +178,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Windows\Registration\Registation.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -240,6 +233,8 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Resource Include="Res\Почта.png" />
+    <Resource Include="Res\БелыйФон.jpg" />
     <Resource Include="Res\человек.png" />
     <Resource Include="Res\kingPng.png" />
     <Resource Include="Res\фон1.jpg" />
