@@ -60,25 +60,45 @@
                    HorizontalAlignment="Center" Width="160" Height="50" />
         <TextBlock Text="Login" Grid.Row="4" Grid.Column="1"
                    FontSize="22"
-                   FontWeight="Bold"
+                   FontWeight="Light"
                    HorizontalAlignment="Left" Width="58"  
-                   Margin="0 15 0 0"/>
-        <TextBox x:Name="Login" Grid.Row="5" Grid.Column="1"
-                 FontSize="18"   
+                   VerticalAlignment="Bottom"
+                   Margin="0 0 0 5"/>
+        <TextBox x:Name="Login" Grid.Column="1" Grid.Row="5"
+                 FontSize="22"
+                 Height="50"
                  Width="313"
+                 VerticalAlignment="Bottom"
                  HorizontalAlignment="Left"
-                 Background="#FFCECDCD" 
-                />
+                 FontWeight="Light"
+                 FontFamily="Arial"
+                 Foreground="Black"
+                 CaretBrush="Black"
+                 BorderBrush="Black"
+                 Opacity="0.8"
+                 BorderThickness="0,0,0,5"
+                 />
+
         <TextBlock Text="Password" Grid.Row="6" Grid.Column="1"
                    FontSize="22"
-                   FontWeight="Bold"
+                   FontWeight="Light"
+                   VerticalAlignment="Bottom"
                    HorizontalAlignment="Left" Width="97"
-                   Margin="0 15 0 0"/>
+                   Margin="0 0 0 5"/>
         <PasswordBox x:Name="Password" Grid.Row="7" Grid.Column="1"
-                 FontSize="18"
+                 FontSize="22"
+                 Height="50"
                  Width="313"
-                 FontWeight="Black"
-                 HorizontalAlignment="Left" Background="#FFCECDCD"/>
+                 VerticalAlignment="Top"
+                 HorizontalAlignment="Left"
+                 FontWeight="Light"
+                 FontFamily="Arial"
+                 Foreground="Black"
+                 CaretBrush="Black"
+                 BorderBrush="Black"
+                 Background="White"
+                 Opacity="0.8"
+                 BorderThickness="0,0,0,5"/>
         <TextBlock Text="Забыли пароль?" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="8" 
                  FontSize="11" 
                  FontStyle="Italic" 
