@@ -4,8 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kingsman20.Windows.Login"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
         Title="RegWindow" Height="650" Width="670">
+        
 
     <Grid>
         <Grid.ColumnDefinitions>
