@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:Kingsman20.Windows.Login"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d"
-        Title="RegWindow" Height="650" Width="670">
-        
+        Title="RegWindow" Height="670" Width="600">
+
 
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
             <ColumnDefinition Width="600"/>
-            <ColumnDefinition Width="50"/>
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -30,12 +30,56 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Res/БелыйФон.jpg" Opacity="1"/>
         </Grid.Background>
+        <Image Source="/Res/человек.png" Grid.Column="0" Grid.Row="2"
+               Height="40"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Right"
+               Margin="0,0,5,0"/>
 
+        <Image Source="/Res/Почта.png" Grid.Column="0" Grid.Row="3"
+               Height="40"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Right"
+               Margin="0,0,5,0"/>
 
+        <Image Source="/Res/ключ.png" Grid.Column="0" Grid.Row="5"
+               Height="40"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Right"
+               Margin="0,0,5,0"/>
+        <Border Grid.Column="1" Grid.Row="6"
+                Height="50"
+                VerticalAlignment="Top"
+                Width="250"
+                HorizontalAlignment="Left"
+                CornerRadius="50"
+                BorderThickness="20"/>
 
-        <Image x:Name="Почта" Source="/Res/Почта.png" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Center" Width="40" Margin="0,3,0,0"/>
-        <Image x:Name="Человек" Source="/Res/человек.png" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" Width="40" Margin="0,3,0,0"/>
-        <Image x:Name="Ключ" Source="/Res/ключ.png" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Top"  Width="40" Margin="0,3,0,0"/>
+        <StackPanel Grid.Row="6" Grid.Column="1" Margin="0,0,50,0" Width="NaN"/>
+        <Button x:Name="VxodReg"
+                Grid.Column="1" 
+                Grid.Row="6"
+                HorizontalAlignment="Left"
+                BorderThickness="0"
+                Content="Registration"
+                Foreground="Black"
+                FontFamily="Montserrat"
+                Cursor="Hand"
+                FontSize="20"
+                Width="250"
+                Height="50"
+                VerticalAlignment="Top"
+                FontWeight="Bold" 
+                Click="VxodReg_Click" >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FF757272" Offset="0.99"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
         <TextBlock Grid.Column="1"
                    Text="Регистрация"
                    FontSize="50"
@@ -62,7 +106,7 @@
                  Background="White"
                  Opacity="0.8"
                  BorderThickness="0,0,0,5" />
-                
+
         <TextBlock Text ="Email:" Grid.Column="1" Grid.Row="2"
                    FontSize="22"
                    FontWeight="Light"
@@ -105,22 +149,43 @@
                    Margin="0,0,0,5"
                    HorizontalAlignment="Left"
                    />
-        <Button x:Name="VxodReg"
-                Grid.Column="1" 
-                Grid.Row="6"
-                HorizontalAlignment="Left"
-                BorderThickness="0"
-                Content="Registration"
-                Foreground="Black"
-                FontFamily="Montserrat"
-                Cursor="Hand"
-                FontSize="20"
-                Width="250"
-                Height="50"
-                VerticalAlignment="Top"
-                FontWeight="Bold"
-                Background="#FFC1C1C1" 
-                Click="VxodReg_Click" />
 
+
+        <TextBlock Text="Уже есть аккаунт? " Grid.Column="1" Grid.Row="6"
+                   FontSize="11.8"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left"
+                   Margin="0,0,0,0"
+                   FontStyle="Italic"/>
+        <TextBlock x:Name="EstAccount"  Grid.Column="1" Grid.Row="6"
+                   FontSize="11.8"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left"
+                   Margin="110,0,0,0"
+                   FontStyle="Italic">
+        <Hyperlink NavigateUri="AutWindow.xaml.cs"
+                      x:Name="Войдите"
+                      Command="{Binding VisisLaunch}"
+                      CommandParameter="{Binding ElementName=Войдите,Path=NavigateUri}">
+            Войдите!
+
+
+        </Hyperlink>
+        </TextBlock>
+
+        <Image Source="/Res/vk.png" Grid.Row="7"
+                
+               Margin="60,10,0,-5" Grid.ColumnSpan="2"
+               HorizontalAlignment="Left"/>
+        <Image Source="/Res/insta.png" Grid.Row="7"
+                
+               Margin="110,10,0,-5" Grid.ColumnSpan="2"
+               HorizontalAlignment="Left"/>
+        <Image Source="/Res/google.png" Grid.Row="7"
+                HorizontalAlignment="Left"
+               Margin="160,10,0,-5" Grid.ColumnSpan="2" />
+        <Image Source="/Res/facebook.png" Grid.Row="7"
+                HorizontalAlignment="Left"
+               Margin="210,10,0,-5" Grid.ColumnSpan="2" />
     </Grid>
 </Window>

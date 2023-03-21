@@ -83,6 +83,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\Cabinet\ServiceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Cabinet\UserPersonalCabinet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -164,6 +168,9 @@
     <Compile Include="Windows\Cabinet\AdminPersonalCabinet.xaml.cs">
       <DependentUpon>AdminPersonalCabinet.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Cabinet\ServiceWindow.xaml.cs">
+      <DependentUpon>ServiceWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Cabinet\UserPersonalCabinet.xaml.cs">
       <DependentUpon>UserPersonalCabinet.xaml</DependentUpon>
     </Compile>
@@ -233,6 +240,10 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <Resource Include="Res\Google.png" />
+    <Resource Include="Res\facebook.png" />
+    <Resource Include="Res\Insta.png" />
+    <Resource Include="Res\vk.png" />
     <Resource Include="Res\Почта.png" />
     <Resource Include="Res\БелыйФон.jpg" />
     <Resource Include="Res\человек.png" />

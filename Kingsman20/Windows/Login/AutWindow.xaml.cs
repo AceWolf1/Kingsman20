@@ -28,21 +28,21 @@ namespace Kingsman20.Windows.Login
 
         private void Vxod_Click(object sender, RoutedEventArgs e)
         {
-            var userAuth = ClassHelper.EF.Context.Staff.ToList().
-              Where(i => i.Email == Login.Text && i.Password == Password.Password).
-              FirstOrDefault();
+            //var userAuth = ClassHelper.EF.Context.Staff.ToList().
+            //  Where(i => i.Email == Login.Text && i.Password == Password.Password).
+            //  FirstOrDefault();
 
-            if (userAuth != null)
-            {
-                MainWindow serviceWindow = new MainWindow();
-                serviceWindow.Show();
-                this.Close();
+            //if (userAuth != null)
+            //{
+            //    MainWindow serviceWindow = new MainWindow();
+            //    serviceWindow.Show();
+            //    this.Close();
 
-            }
-            else
-            {
-                MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            //}
         }
 
         private void Login_TextChanged(object sender, TextChangedEventArgs e)
@@ -64,7 +64,7 @@ namespace Kingsman20.Windows.Login
         }
             private void Reg_Click(object sender, RoutedEventArgs e)
             {
-                this.Close();
+                this.Hide();
                 RegWindow registerForm = new RegWindow();
                 registerForm.Show();
             }
