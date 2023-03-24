@@ -218,7 +218,8 @@
                    Margin="0,0,0,5"
                    HorizontalAlignment="Left"
                    />
-        <ComboBox  x:Name="GenderComboBox" Grid.Row="14" Grid.Column="1"
+        <ComboBox  x:Name="GenderComboBox" 
+                   Grid.Row="14" Grid.Column="1"
                   Width="250"
                   Height="40"
                   VerticalAlignment="Bottom"

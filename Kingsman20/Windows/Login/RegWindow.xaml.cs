@@ -23,7 +23,9 @@ namespace Kingsman20.Windows.Login
         {
             InitializeComponent();
             GenderComboBox.ItemsSource = ClassHelper.EF.Context.Gender.ToList();
-            GenderComboBox.DisplayMemberPath = "Gender";
+
+            //MessageBox.Show(ClassHelper.EF.Context.Gender.ToList().Count.ToString());
+            GenderComboBox.DisplayMemberPath = "Gender1";
         }
 
         private void VxodReg_Click(object sender, RoutedEventArgs e)
