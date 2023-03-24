@@ -7,6 +7,9 @@
         mc:Ignorable="d"
         Title="ServiceWindow" Height="850" Width="1024">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Res/БелыйФон.jpg"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="10*"/>
@@ -22,6 +25,9 @@
                   Grid.Row="1" 
                   d:ItemsSource="{d:SampleData ItemCount=5}"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView.Background>
+                <ImageBrush ImageSource="/Res/БелыйФон2.jpg" Stretch="UniformToFill" Opacity="0.5"/>
+            </ListView.Background>
 
 
 
@@ -36,9 +42,9 @@
                     <Border BorderBrush="Gray"
                             BorderThickness="2"
                             Width="200"
-                            Height="300"
+                            Height="350"
                             Margin="16"
-                            CornerRadius="8">
+                            CornerRadius="20">
                         <StackPanel>
                             <Image Height="180"
                                    Width="180" 
@@ -46,7 +52,9 @@
                                 <Image.Source>
                                     <Binding Path ="Image">
                                         <Binding.TargetNullValue>
-                                            <ImageSource>/Res/человек.png</ImageSource>
+                                            <ImageSource>
+                                                /Res/человек.png
+                                            </ImageSource>
                                         </Binding.TargetNullValue>
                                     </Binding>
                                 </Image.Source>
@@ -62,6 +70,17 @@
                                        FontSize="18"
                                        Margin="5 3"
                                        TextWrapping="Wrap" FontFamily="Arial Rounded MT Bold"/>
+                      
+                                <Button x:Name="BtnServiceWindow"
+                                    
+                                    Content="{Binding Добавить}"
+                                    FontSize="18"
+                                    Width="140"
+                                    Margin="5 10"
+                                    BorderBrush="Gray"
+                                    FontWeight="Bold"
+                                    HorizontalAlignment="Center" SnapsToDevicePixels="True"/>
+                           
                         </StackPanel>
 
                     </Border>

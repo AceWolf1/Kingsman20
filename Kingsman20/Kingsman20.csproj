@@ -269,6 +269,7 @@
       <DependentUpon>EF.edmx</DependentUpon>
       <LastGenOutput>EF.cs</LastGenOutput>
     </Content>
+    <Resource Include="Res\БелыйФон2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

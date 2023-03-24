@@ -34,14 +34,14 @@ namespace Kingsman20.Windows.Login
 
             //if (userAuth != null)
             //{
-            //    MainWindow serviceWindow = new MainWindow();
-            //    serviceWindow.Show();
-            //    this.Close();
+               MainWindow serviceWindow = new MainWindow();
+               serviceWindow.Show();
+               this.Close();
 
             //}
             //else
             //{
-            //    MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             //}
         }
 

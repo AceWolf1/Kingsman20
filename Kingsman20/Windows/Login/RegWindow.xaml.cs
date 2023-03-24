@@ -22,20 +22,59 @@ namespace Kingsman20.Windows.Login
         public RegWindow()
         {
             InitializeComponent();
-            GenderComboBox.ItemsSource = ClassHelper.EF.Context.Gender.ToList();
+            //GenderComboBox.ItemsSource = ClassHelper.EF.Context.Gender.ToList();
 
             //MessageBox.Show(ClassHelper.EF.Context.Gender.ToList().Count.ToString());
             GenderComboBox.DisplayMemberPath = "Gender1";
+            GenderComboBox.SelectedIndex = 0;
         }
 
         private void VxodReg_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
-            AutWindow autWindow = new AutWindow();
-            autWindow.Show();
+            if (string.IsNullOrWhiteSpace(TBLastName.Text))
+                {
+                MessageBox.Show("Поле LastName не заполнено");
+                return;
+                }
+            if (string.IsNullOrWhiteSpace(TBFirsName.Text))
+            {
+                MessageBox.Show("Поле FirstName не заполнено");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(TBPhone.Text))
+            {
+                MessageBox.Show("Поле Phone не заполнено");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(TBEmail.Text))
+            {
+                MessageBox.Show("Поле Email не заполнено");
+                return;
+            }
+            
+            DB.Client addClient = new DB.Client();
+            addClient.LName = TBLastName.Text;
+            addClient.FName = TBFirsName.Text;
+            addClient.Patronymic = TBPatronymic.Text;
+            addClient.Phone = TBPhone.Text;
+            addClient.Email = TBEmail.Text;
+            addClient.Password = PBPassword.Password;
+            if (TBPatronymic.Text != string.Empty)
+            {
+                addClient.Patronymic = TBPatronymic.Text;
+            }
+            //addClient.Gender = (GenderComboBox.SelectedItem as DB.Gender).Gender1();
+            ClassHelper.EF.Context.SaveChanges();
+            MessageBox.Show("Пользователь успешно добавлен");
+
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void TBPhone_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
