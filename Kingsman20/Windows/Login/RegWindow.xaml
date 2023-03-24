@@ -90,7 +90,7 @@
                    HorizontalAlignment="Left"
                    VerticalAlignment="Center"/>
         <TextBlock Tag="Full Name"
-                   Text="Name:" Grid.Row="1" Grid.Column="1"
+                   Text="FirstName:" Grid.Row="1" Grid.Column="1"
                    FontSize="22"
                    FontWeight="Light"
                    VerticalAlignment="Bottom" Margin="0,0,0,5"/>
@@ -128,7 +128,7 @@
                  
                  Background="White"
                  Opacity="0.8"
-                 BorderThickness="0,0,0,5" />
+                 BorderThickness="0,0,0,5" TextChanged="TBLastName_TextChanged" />
         <TextBlock 
                    Text="Patronymic:" Grid.Row="5" Grid.Column="1"
                    FontSize="22"

@@ -31,16 +31,17 @@ namespace Kingsman20.Windows.Login
 
         private void VxodReg_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TBLastName.Text))
-                {
-                MessageBox.Show("Поле LastName не заполнено");
-                return;
-                }
             if (string.IsNullOrWhiteSpace(TBFirsName.Text))
             {
                 MessageBox.Show("Поле FirstName не заполнено");
                 return;
             }
+            if (string.IsNullOrWhiteSpace(TBLastName.Text))
+            {
+                MessageBox.Show("Поле LastName не заполнено");
+                return;
+            }
+        
             if (string.IsNullOrWhiteSpace(TBPhone.Text))
             {
                 MessageBox.Show("Поле Phone не заполнено");
@@ -51,7 +52,12 @@ namespace Kingsman20.Windows.Login
                 MessageBox.Show("Поле Email не заполнено");
                 return;
             }
-            
+            if (string.IsNullOrWhiteSpace(PBPassword.Password))
+            {
+                MessageBox.Show("Поле Password не заполнено");
+                return;
+
+            }
             DB.Client addClient = new DB.Client();
             addClient.LName = TBLastName.Text;
             addClient.FName = TBFirsName.Text;
@@ -65,7 +71,8 @@ namespace Kingsman20.Windows.Login
             }
             //addClient.Gender = (GenderComboBox.SelectedItem as DB.Gender).Gender1();
             ClassHelper.EF.Context.SaveChanges();
-            MessageBox.Show("Пользователь успешно добавлен");
+            //MessageBox.Show("Пользователь успешно добавлен");
+            MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OKCancel, MessageBoxImage.Information);
 
         }
 
@@ -75,6 +82,11 @@ namespace Kingsman20.Windows.Login
         }
 
         private void TBPhone_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TBLastName_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
