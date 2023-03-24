@@ -109,61 +109,61 @@
     </Compile>
     <Compile Include="ClassHelper\EF.cs" />
     <Compile Include="DB\Client.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\ClientService.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\EF.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EF.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\EF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\EF.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EF.edmx</DependentUpon>
     </Compile>
     <Compile Include="DB\Gender.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Manufacturer.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Model.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Model.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Model.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model.edmx</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Order.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Position.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Product.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\ProductSale.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Service.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Size.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\sp_helpdiagrams_Result.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Staff.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\sysdiagrams.cs">
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>EF.tt</DependentUpon>
     </Compile>
     <Compile Include="Windows\Cabinet\AdminPersonalCabinet.xaml.cs">
       <DependentUpon>AdminPersonalCabinet.xaml</DependentUpon>
@@ -204,12 +204,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DB\Model.edmx">
+    <EntityDeploy Include="DB\EF.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+      <LastGenOutput>EF.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DB\Model.edmx.diagram">
-      <DependentUpon>Model.edmx</DependentUpon>
+    <None Include="DB\EF.edmx.diagram">
+      <DependentUpon>EF.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -230,16 +230,6 @@
     <Resource Include="Windows\Login\кинг1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\Model.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model.Context.cs</LastGenOutput>
-      <DependentUpon>Model.edmx</DependentUpon>
-    </Content>
-    <Content Include="DB\Model.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.cs</LastGenOutput>
-    </Content>
     <Resource Include="Res\Google.png" />
     <Resource Include="Res\facebook.png" />
     <Resource Include="Res\Insta.png" />
@@ -267,6 +257,18 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\EF.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EF.edmx</DependentUpon>
+      <LastGenOutput>EF.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\EF.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EF.edmx</DependentUpon>
+      <LastGenOutput>EF.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,6 +22,8 @@ namespace Kingsman20.Windows.Login
         public RegWindow()
         {
             InitializeComponent();
+            GenderComboBox.ItemsSource = ClassHelper.EF.Context.Gender.ToList();
+            GenderComboBox.DisplayMemberPath = "GenderName";
         }
 
         private void VxodReg_Click(object sender, RoutedEventArgs e)
@@ -29,6 +31,11 @@ namespace Kingsman20.Windows.Login
             this.Close();
             AutWindow autWindow = new AutWindow();
             autWindow.Show();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
