@@ -79,6 +79,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Windows\Cabinet\AddServiceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Cabinet\AdminPersonalCabinet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -164,6 +168,9 @@
     </Compile>
     <Compile Include="DB\sysdiagrams.cs">
       <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Cabinet\AddServiceWindow.xaml.cs">
+      <DependentUpon>AddServiceWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Cabinet\AdminPersonalCabinet.xaml.cs">
       <DependentUpon>AdminPersonalCabinet.xaml</DependentUpon>
@@ -269,6 +276,7 @@
       <DependentUpon>EF.edmx</DependentUpon>
       <LastGenOutput>EF.cs</LastGenOutput>
     </Content>
+    <Resource Include="Res\299068_add_sign_icon.png" />
     <Resource Include="Res\БелыйФон2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -23,5 +23,17 @@ namespace Kingsman20.Windows.Cabinet
         {
             InitializeComponent();
         }
+
+       
+
+        private void Spisok_Click(object sender, RoutedEventArgs e)
+        {
+           
+                AddServiceWindow addServiceWindow = new AddServiceWindow();
+                addServiceWindow.ShowDialog();
+
+                //GetListService();
+            
+        }
     }
 }

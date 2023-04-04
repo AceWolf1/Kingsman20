@@ -15,7 +15,16 @@
             <RowDefinition Height="10*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-
+        <Button x:Name="Spisok"  Grid.Row="2" HorizontalAlignment="Right"
+                
+                FontSize="20"
+                Width="50"
+                Height="50"
+                Margin="0 0 50 0"  Click="Spisok_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Res/299068_add_sign_icon.png" TileMode="None" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
         <TextBlock Text="Список услуг"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
@@ -70,17 +79,9 @@
                                        FontSize="18"
                                        Margin="5 3"
                                        TextWrapping="Wrap" FontFamily="Arial Rounded MT Bold"/>
-                      
-                                <Button x:Name="BtnServiceWindow"
-                                    
-                                    Content="{Binding Добавить}"
-                                    FontSize="18"
-                                    Width="140"
-                                    Margin="5 10"
-                                    BorderBrush="Gray"
-                                    FontWeight="Bold"
-                                    HorizontalAlignment="Center" SnapsToDevicePixels="True"/>
-                           
+
+
+
                         </StackPanel>
 
                     </Border>
