@@ -22,10 +22,9 @@ namespace Kingsman20.Windows.Login
         public RegWindow()
         {
             InitializeComponent();
-            //GenderComboBox.ItemsSource = ClassHelper.EF.Context.Gender.ToList();
 
-            //MessageBox.Show(ClassHelper.EF.Context.Gender.ToList().Count.ToString());
-            GenderComboBox.DisplayMemberPath = "Gender1";
+            GenderComboBox.ItemsSource = ClassHelper.EF.Context.Gender.ToList();
+            GenderComboBox.DisplayMemberPath = "Gender";
             GenderComboBox.SelectedIndex = 0;
         }
 
@@ -69,10 +68,12 @@ namespace Kingsman20.Windows.Login
             {
                 addClient.Patronymic = TBPatronymic.Text;
             }
-            //addClient.Gender = (GenderComboBox.SelectedItem as DB.Gender).Gender1();
+            addClient.GenderCodeID = (GenderComboBox.SelectedItem as DB.Gender).ID;
+
+            ClassHelper.EF.Context.Client.Add(addClient);
             ClassHelper.EF.Context.SaveChanges();
-            //MessageBox.Show("Пользователь успешно добавлен");
-            MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OKCancel, MessageBoxImage.Information);
+            MessageBox.Show("Пользователь успешно добавлен");
+
 
         }
 

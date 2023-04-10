@@ -34,8 +34,8 @@ namespace Kingsman20.Windows.Login
 
             if (userAuth != null)
             {
-                ServiceWindow ServiceWin = new ServiceWindow();
-                ServiceWin.Show();
+                MainWindow MainWindow = new MainWindow();
+                MainWindow.Show();
                 this.Hide();
               
 

@@ -24,5 +24,20 @@ namespace Kingsman20
         {
             InitializeComponent();
         }
+
+        private void Услуги_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Работники_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Клиенты_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

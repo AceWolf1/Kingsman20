@@ -12,25 +12,18 @@ namespace Kingsman20.DB
     using System;
     using System.Collections.Generic;
     
-    public partial class Service
+    public partial class ServiceType
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Service()
+        public ServiceType()
         {
-            this.ClientService = new HashSet<ClientService>();
+            this.Service = new HashSet<Service>();
         }
     
-        public int ID { get; set; }
-        public string Title { get; set; }
-        public decimal Cost { get; set; }
-        public string Comment { get; set; }
-        public int ClientID { get; set; }
-        public int ServiceTypeID { get; set; }
-        public string Image { get; set; }
+        public int id { get; set; }
+        public string TypeName { get; set; }
     
-        public virtual Client Client { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClientService> ClientService { get; set; }
-        public virtual ServiceType ServiceType { get; set; }
+        public virtual ICollection<Service> Service { get; set; }
     }
 }

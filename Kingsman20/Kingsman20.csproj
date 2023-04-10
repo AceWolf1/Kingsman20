@@ -87,6 +87,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\Cabinet\EditServiceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Cabinet\ServiceWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -154,6 +158,9 @@
     <Compile Include="DB\Service.cs">
       <DependentUpon>EF.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\ServiceType.cs">
+      <DependentUpon>EF.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\Size.cs">
       <DependentUpon>EF.tt</DependentUpon>
     </Compile>
@@ -174,6 +181,9 @@
     </Compile>
     <Compile Include="Windows\Cabinet\AdminPersonalCabinet.xaml.cs">
       <DependentUpon>AdminPersonalCabinet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Cabinet\EditServiceWindow.xaml.cs">
+      <DependentUpon>EditServiceWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Cabinet\ServiceWindow.xaml.cs">
       <DependentUpon>ServiceWindow.xaml</DependentUpon>
@@ -266,6 +276,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Res\299068_add_sign_icon.png" />
+    <Resource Include="Res\БелыйФон2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="DB\EF.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EF.edmx</DependentUpon>
@@ -276,8 +290,6 @@
       <DependentUpon>EF.edmx</DependentUpon>
       <LastGenOutput>EF.cs</LastGenOutput>
     </Content>
-    <Resource Include="Res\299068_add_sign_icon.png" />
-    <Resource Include="Res\БелыйФон2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

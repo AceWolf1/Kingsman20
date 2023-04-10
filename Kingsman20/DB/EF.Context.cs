@@ -35,6 +35,7 @@ namespace Kingsman20.DB
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<ProductSale> ProductSale { get; set; }
         public virtual DbSet<Service> Service { get; set; }
+        public virtual DbSet<ServiceType> ServiceType { get; set; }
         public virtual DbSet<Size> Size { get; set; }
         public virtual DbSet<Staff> Staff { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }

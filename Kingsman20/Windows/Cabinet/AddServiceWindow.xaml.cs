@@ -39,11 +39,11 @@ namespace Kingsman20.Windows.Cabinet
             newService.Cost = Convert.ToDecimal(TbPriceService.Text);
             newService.Title = TbNameService.Text;
             newService.Comment = TbDiscService.Text;
-            //newService.ServiceTypeID = (CmbTypeService.SelectedItem as DB.ServiceType).ID;
-            //if (pathImage != null)
-            //{
-            //    newService.Image = pathImage;
-            //}
+            newService.ServiceTypeID = (CmbTypeService.SelectedItem as DB.ServiceType).id;
+            if (pathImage != null)
+            {
+                newService.Image = pathImage;
+            }
 
             ClassHelper.EF.Context.Service.Add(newService);
             ClassHelper.EF.Context.SaveChanges();
