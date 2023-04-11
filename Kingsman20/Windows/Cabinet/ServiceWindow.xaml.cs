@@ -35,5 +35,22 @@ namespace Kingsman20.Windows.Cabinet
                 //GetListService();
             
         }
+
+    
+
+        private void LvService_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Cor_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
