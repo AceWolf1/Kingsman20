@@ -16,14 +16,15 @@
             <RowDefinition Height="10*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <Button x:Name="Back"  Grid.Row="2" HorizontalAlignment="Right"
+        <Button x:Name="BtnPay"  Grid.Row="2" HorizontalAlignment="Right"
                 
                 BorderThickness="0"
                 FontSize="20"
-                Width="110"
+                Width="160"
                 Height="50"
-                Margin="0,0,70,0"  Click="Spisok_Click"
-                Content="Back" Background="#FFD8D8D8"/>
+                Margin="0,0,70,0"  
+                Click="BtnPay_Click"
+                Content="Оформить заказ" Background="#FFD8D8D8"/>
         <TextBlock Text="Корзина"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
@@ -79,14 +80,31 @@
                                        Margin="5 3"
                                        TextWrapping="Wrap" FontFamily="Arial Rounded MT Bold"/>
                             <WrapPanel>
-                                <Button  x:Name="Delete"
+                                <Button  x:Name="AddCor"
                                      FontSize="18"                    
-                                     Width="50"
-                                     Height="50"
+                                     Width="45"
+                                     Height="45"
                                      Margin="10 10 0 0"
                                      HorizontalAlignment="Right"
                                      BorderThickness="0"
-                                     Click="Delete_Click">
+                                     Click="AddCor_Click">
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="25"/>
+                                        </Style>
+                                    </Button.Resources>
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="/Res/299068_add_sign_icon.png"/>
+                                    </Button.Background>
+                                </Button>
+                                <Button  x:Name="DeleteCor"
+                                     FontSize="18"                    
+                                     Width="40"
+                                     Height="40"
+                                     Margin="80 12 0 0"
+                                     HorizontalAlignment="Right"
+                                     BorderThickness="0"
+                                     Click="DeleteCor_Click">
                                     <Button.Resources>
                                         <Style TargetType="Border">
                                             <Setter Property="CornerRadius" Value="25"/>

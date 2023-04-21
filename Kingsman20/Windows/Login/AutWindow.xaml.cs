@@ -34,6 +34,7 @@ namespace Kingsman20.Windows.Login
 
             if (userAuth != null)
             {
+                
                 MainWindow MainWindow = new MainWindow();
                 MainWindow.Show();
                 this.Hide();
@@ -46,23 +47,7 @@ namespace Kingsman20.Windows.Login
             }
         }
 
-        private void Login_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Login_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-
-        private void BtnSigIn_Click(object sender, RoutedEventArgs e)
-        {
-
-
-           
-        }
+ 
             private void Reg_Click(object sender, RoutedEventArgs e)
             {
                 this.Hide();

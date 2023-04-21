@@ -19,6 +19,7 @@ namespace Kingsman20.DB
         public int ProductID { get; set; }
         public int StaffID { get; set; }
         public System.DateTime SaleDate { get; set; }
+        public int Quatity { get; set; }
     
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }

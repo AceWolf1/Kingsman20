@@ -119,7 +119,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ClassHelper\CartServiceClass.cs" />
     <Compile Include="ClassHelper\EF.cs" />
+    <Compile Include="ClassHelper\UserDataClass.cs" />
     <Compile Include="DB\Client.cs">
       <DependentUpon>EF.tt</DependentUpon>
     </Compile>
@@ -287,6 +289,11 @@
     <Resource Include="Res\БелыйФон2.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Res\edit %282%29.png" />
+    <Resource Include="Res\addCorzina.png" />
+    <Resource Include="Res\del.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="DB\EF.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EF.edmx</DependentUpon>
@@ -297,9 +304,6 @@
       <DependentUpon>EF.edmx</DependentUpon>
       <LastGenOutput>EF.cs</LastGenOutput>
     </Content>
-    <Resource Include="Res\edit %282%29.png" />
-    <Resource Include="Res\addCorzina.png" />
-    <Resource Include="Res\del.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

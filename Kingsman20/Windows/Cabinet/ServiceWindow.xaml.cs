@@ -22,9 +22,14 @@ namespace Kingsman20.Windows.Cabinet
         public ServiceWindow()
         {
             InitializeComponent();
+            GetListService();
+        }
+        private void GetListService()
+        {
+            LvService.ItemsSource = ClassHelper.EF.Context.Service.ToList();
         }
 
-       
+
 
         private void Spisok_Click(object sender, RoutedEventArgs e)
         {
@@ -43,12 +48,34 @@ namespace Kingsman20.Windows.Cabinet
 
         }
 
-        private void Cor_Click(object sender, RoutedEventArgs e)
+        private void Edit_Click(object sender, RoutedEventArgs e)
         {
-
+            var button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+            var service = button.DataContext as DB.Service;
+            EditServiceWindow editServiceWindow = new EditServiceWindow(service);
+            editServiceWindow.ShowDialog();
         }
 
-        private void Edit_Click(object sender, RoutedEventArgs e)
+        private void Cor_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+            var service = button.DataContext as DB.Service; // получаем выбранную запись
+
+
+            CartWindow.ServiceCart.Add(service);
+
+            MessageBox.Show($"Услуга {service.Title} добавлена в корзину!");
+        }
+
+        private void BtnGoToCart_Click(object sender, RoutedEventArgs e)
         {
 
         }
