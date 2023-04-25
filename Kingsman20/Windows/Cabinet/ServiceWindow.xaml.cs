@@ -70,14 +70,15 @@ namespace Kingsman20.Windows.Cabinet
             var service = button.DataContext as DB.Service; // получаем выбранную запись
 
 
-            CartWindow.ServiceCart.Add(service);
+            ClassHelper.CartServiceClass.ServiceCart.Add(service);
 
             MessageBox.Show($"Услуга {service.Title} добавлена в корзину!");
         }
 
         private void BtnGoToCart_Click(object sender, RoutedEventArgs e)
         {
-
+            CartWindow cartWindow = new CartWindow();
+            cartWindow.ShowDialog();
         }
     }
 }

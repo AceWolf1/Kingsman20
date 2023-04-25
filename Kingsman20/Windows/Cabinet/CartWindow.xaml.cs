@@ -78,9 +78,9 @@ namespace Kingsman20.Windows.Cabinet
                 DB.ProductSale orderService = new DB.ProductSale();
                 orderService.OrderID = 1;
                 orderService.ProductID = item.ID;
-                orderService.Quantity = 1;
+                orderService.Quatity = 1;
 
-                EF.Context.OrderService.Add(orderService);
+                EF.Context.ProductSale.Add(orderService);
 
             }
 
