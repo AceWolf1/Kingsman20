@@ -50,7 +50,8 @@
                        FontSize="18"
                        HorizontalAlignment="Center"
                        Margin="0 16 0 0"/>
-            <TextBox x:Name="TbDiscService"
+            <TextBox x:Name="TbDiscService"<Image Source="/Windows/Login/кинг1.jpg" />
+
                          FontSize="18"                    
                          Width="200"
                          Height="30"

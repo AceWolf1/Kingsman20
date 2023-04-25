@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="ClassHelper\CartServiceClass.cs" />
     <Compile Include="ClassHelper\EF.cs" />
+    <Compile Include="ClassHelper\Service.cs" />
     <Compile Include="ClassHelper\UserDataClass.cs" />
     <Compile Include="DB\Client.cs">
       <DependentUpon>EF.tt</DependentUpon>

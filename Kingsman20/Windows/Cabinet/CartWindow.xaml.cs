@@ -58,7 +58,13 @@ namespace Kingsman20.Windows.Cabinet
 
         private void LvService_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            var button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+            var service = button.DataContext as DB.Service;
+            service.Quantity
         }
 
     
