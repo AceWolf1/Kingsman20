@@ -79,40 +79,39 @@
                                        FontSize="18"
                                        Margin="5 3"
                                        TextWrapping="Wrap" FontFamily="Arial Rounded MT Bold"/>
-                            <WrapPanel>
-                                <Button  x:Name="AddCor"
-                                     FontSize="18"                    
-                                     Width="45"
-                                     Height="45"
-                                     Margin="10 10 0 0"
-                                     HorizontalAlignment="Right"
-                                     BorderThickness="0"
-                                     Click="AddCor_Click">
-                                    <Button.Resources>
-                                        <Style TargetType="Border">
-                                            <Setter Property="CornerRadius" Value="25"/>
-                                        </Style>
-                                    </Button.Resources>
+                            <WrapPanel Orientation="Horizontal"
+                                   VerticalAlignment="Bottom"
+                                   HorizontalAlignment="Left"
+                                   Margin="0 20 10 10">
+
+                                <Button x:Name="BtnLowerCart"
+                                    Content="-"
+                                    Width="20"
+                                    Click="BtnLowerCart_Click"/>
+                                <TextBox x:Name="TbServiceCartQuantity"
+                                     Width="50"
+                                     FontSize="15"
+                                     HorizontalContentAlignment="Center"
+                                     Text="{Binding Count}">
+
+                                </TextBox>
+                                <Button x:Name="BtnHigherCart"
+                                    Content="+"
+                                    Width="20"
+                                    Click="BtnHigherCart_Click"/>
+
+                                <Button x:Name="BtnDeleteCart"
+                                    Width="20"
+                                    Height="20"
+                                    HorizontalAlignment="Right"
+                                VerticalAlignment="Bottom"
+                                    Margin="5 0 0 0"
+                                    Click="BtnDeleteCart_Click"
+                                    BorderThickness="0">
                                     <Button.Background>
-                                        <ImageBrush ImageSource="/Res/299068_add_sign_icon.png"/>
+                                        <ImageBrush ImageSource="/Res/addCorzina.png"/>
                                     </Button.Background>
-                                </Button>
-                                <Button  x:Name="DeleteCor"
-                                     FontSize="18"                    
-                                     Width="40"
-                                     Height="40"
-                                     Margin="40 12 0 0"
-                                     HorizontalAlignment="Right"
-                                     BorderThickness="0"
-                                     Click="DeleteCor_Click">
-                                    <Button.Resources>
-                                        <Style TargetType="Border">
-                                            <Setter Property="CornerRadius" Value="25"/>
-                                        </Style>
-                                    </Button.Resources>
-                                    <Button.Background>
-                                        <ImageBrush ImageSource="/Res/del.png"/>
-                                    </Button.Background>
+                                    <Image Source="/Res/bin.png"/>
                                 </Button>
                             </WrapPanel>
 

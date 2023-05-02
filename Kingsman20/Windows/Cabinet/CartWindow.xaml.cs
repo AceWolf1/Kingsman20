@@ -32,12 +32,25 @@ namespace Kingsman20.Windows.Cabinet
             LvService.ItemsSource = listCart;
         }
 
-
-
-        private void AddCor_Click(object sender, RoutedEventArgs e)
+        private void BtnDeleteCart_Click(object sender, RoutedEventArgs e)
         {
+            var button = sender as Button;
+            if  (button == null)
+            {
+                return;
+            }
+            var service = button.DataContext as DB.Service;
 
+            service.Quantity = 0;
+
+            ClassHelper.CartServiceClass.ServiceCart.Remove(service);
+
+            GetListServise();
         }
+
+
+
+
 
         private void DeleteCor_Click(object sender, RoutedEventArgs e)
         {
@@ -91,5 +104,45 @@ namespace Kingsman20.Windows.Cabinet
             }
 
         }
+
+        private void BtnLowerCart_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+
+            if (button == null) 
+            {
+                return;
+            }
+            var service = button.DataContext as DB.Service;
+
+            if (service.Quantity > 1)
+
+            {
+                service.Quantity--;
+                GetListServise();
+            }
+        }
+
+        private void BtnHigherCart_Click(object sender, RoutedEventArgs e)
+
+        {
+            var button = sender as Button;
+
+            if (button == null)
+            {
+                return;
+
+            }
+            var service = button.DataContext as DB.Service;
+
+            if (service.Quantity < 20)
+            {
+
+                service.Quantity++;
+                GetListServise();
+            }
+        }
+
+
     }
 }
