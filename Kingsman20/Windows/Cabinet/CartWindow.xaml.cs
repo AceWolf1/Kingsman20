@@ -77,7 +77,7 @@ namespace Kingsman20.Windows.Cabinet
                 return;
             }
             var service = button.DataContext as DB.Service;
-            service.Quantity
+            //service.Quantity;
         }
 
     

@@ -79,6 +79,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Windows\Cabinet\AddEmployeeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Cabinet\AddServiceWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -91,7 +95,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\Cabinet\ClientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Cabinet\EditClientWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Cabinet\EditEmployeeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Cabinet\EditServiceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Cabinet\EmployeeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Cabinet\ReportWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -183,6 +207,9 @@
     <Compile Include="DB\sysdiagrams.cs">
       <DependentUpon>EF.tt</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Cabinet\AddEmployeeWindow.xaml.cs">
+      <DependentUpon>AddEmployeeWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Cabinet\AddServiceWindow.xaml.cs">
       <DependentUpon>AddServiceWindow.xaml</DependentUpon>
     </Compile>
@@ -192,8 +219,23 @@
     <Compile Include="Windows\Cabinet\CartWindow.xaml.cs">
       <DependentUpon>CartWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\Cabinet\ClientWindow.xaml.cs">
+      <DependentUpon>ClientWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Cabinet\EditClientWindow.xaml.cs">
+      <DependentUpon>EditClientWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Cabinet\EditEmployeeWindow.xaml.cs">
+      <DependentUpon>EditEmployeeWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Cabinet\EditServiceWindow.xaml.cs">
       <DependentUpon>EditServiceWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Cabinet\EmployeeWindow.xaml.cs">
+      <DependentUpon>EmployeeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Cabinet\ReportWindow.xaml.cs">
+      <DependentUpon>ReportWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Cabinet\ServiceWindow.xaml.cs">
       <DependentUpon>ServiceWindow.xaml</DependentUpon>

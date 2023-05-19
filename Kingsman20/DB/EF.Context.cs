@@ -82,7 +82,12 @@ namespace Kingsman20.DB
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_creatediagram", diagramnameParameter, owner_idParameter, versionParameter, definitionParameter);
         }
-    
+
+        //internal void SaveChanges()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
         public virtual int sp_dropdiagram(string diagramname, Nullable<int> owner_id)
         {
             var diagramnameParameter = diagramname != null ?
