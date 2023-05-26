@@ -71,13 +71,13 @@ namespace Kingsman20.Windows.Login
             addClient.GenderCodeID = (GenderComboBox.SelectedItem as DB.Gender).ID;
 
             ClassHelper.EF.Context.Client.Add(addClient);
-            ClassHelper.EF.Context.SaveChanges();
+            //ClassHelper.EF.Context.SaveChanges();
             MessageBox.Show("Пользователь успешно добавлен");
 
 
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void TBPatronymic_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
@@ -87,7 +87,17 @@ namespace Kingsman20.Windows.Login
 
         }
 
+        private void TBEmail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
         private void TBLastName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

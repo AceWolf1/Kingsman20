@@ -27,12 +27,11 @@
                 Click="BtnGoToCart_Click">
             <Image Source="/Res/addCorzina.png"/>
         </Button>
-        <Button x:Name="Spisok"  Grid.Row="2" HorizontalAlignment="Right"
+        <Button x:Name="Spisok"  Grid.Row="1" HorizontalAlignment="Left"
                   BorderThickness="0"
                 FontSize="20"
                 Width="50"
-                Height="50"
-                Margin="0,0,80,0"  Click="Spisok_Click" >
+                Margin="894,734,0,0"  Click="Spisok_Click" Grid.RowSpan="2" Height="50" VerticalAlignment="Top" >
             <Button.Background>
                 <ImageBrush ImageSource="/Res/299068_add_sign_icon.png" TileMode="None" Stretch="Uniform"/>
             </Button.Background>
@@ -45,7 +44,9 @@
         <ListView x:Name="LvService" 
                   Grid.Row="1" 
                   d:ItemsSource="{d:SampleData ItemCount=5}"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="LvService_SelectionChanged">
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  SelectionChanged="LvService_SelectionChanged"
+                  >
             <ListView.Background>
                 <ImageBrush ImageSource="/Res/БелыйФон2.jpg" Stretch="UniformToFill" Opacity="0.5"/>
             </ListView.Background>

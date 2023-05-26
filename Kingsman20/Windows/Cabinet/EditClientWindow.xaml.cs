@@ -68,7 +68,7 @@ namespace Kingsman20.Windows.Cabinet
             newClient.Password = TbNewPassword.Text;
             newClient.GenderCodeID = (CmbGender.SelectedItem as DB.Gender).ID;
 
-            ClassHelper.EF.Context.SaveChanges();
+            //ClassHelper.EF.Context.SaveChanges();
 
             MessageBox.Show("OK");
             this.Close();

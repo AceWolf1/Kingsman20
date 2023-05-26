@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -46,7 +45,7 @@ namespace Kingsman20.Windows.Cabinet
             }
 
             ClassHelper.EF.Context.Service.Add(newService);
-            ClassHelper.EF.Context.SaveChanges();
+            //ClassHelper.EF.Context.SaveChanges();
 
             MessageBox.Show("Услуга добавлена", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
 

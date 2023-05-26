@@ -72,7 +72,7 @@ namespace Kingsman20.Windows.Cabinet
             newEmployee.Password = TbNewPassword.Text;
 
             ClassHelper.EF.Context.Staff.Add(newEmployee);
-            ClassHelper.EF.Context.SaveChanges();
+            //ClassHelper.EF.Context.SaveChanges();
 
             MessageBox.Show("Сотрудник был успешно добавлен!");
 

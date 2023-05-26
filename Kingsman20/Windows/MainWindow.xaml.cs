@@ -12,14 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Kingsman20.Windows.Cabinet;
 
 namespace Kingsman20
+
+/// <summary>
+/// Логика взаимодействия для MainWindow.xaml
+/// </summary>
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
+
+
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +32,9 @@ namespace Kingsman20
 
         private void Услуги_Click(object sender, RoutedEventArgs e)
         {
-
+            ServiceWindow serviceWindow = new ServiceWindow();
+            serviceWindow.Show();
+            this.Close();
         }
 
         private void Работники_Click(object sender, RoutedEventArgs e)

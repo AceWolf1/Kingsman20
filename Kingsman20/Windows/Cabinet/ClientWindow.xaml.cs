@@ -69,6 +69,9 @@ namespace Kingsman20.Windows.Cabinet
             SetClientList();
         }
 
-       
+        private void LvClients_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

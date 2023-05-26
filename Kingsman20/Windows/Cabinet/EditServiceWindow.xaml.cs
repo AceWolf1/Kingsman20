@@ -63,7 +63,7 @@ namespace Kingsman20.Windows.Cabinet
             editService.Cost = Convert.ToDecimal(TbPriceService.Text);
             editService.ServiceTypeID = (CmbTypeService.SelectedItem as DB.ServiceType).id;
 
-            ClassHelper.EF.Context.SaveChanges();
+            //ClassHelper.EF.Context.SaveChanges();
 
             MessageBox.Show("Данные успешно сохранны");
 

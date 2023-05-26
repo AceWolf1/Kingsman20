@@ -16,15 +16,14 @@
             <RowDefinition Height="10*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <Button x:Name="BtnPay"  Grid.Row="2" HorizontalAlignment="Right"
+        <Button x:Name="BtnPay"  Grid.Row="1" HorizontalAlignment="Left"
                 
                 BorderThickness="0"
                 FontSize="20"
                 Width="160"
-                Height="50"
-                Margin="0,0,70,0"  
+                Margin="794,734,0,0"  
                 Click="BtnPay_Click"
-                Content="Оформить заказ" Background="#FFD8D8D8"/>
+                Content="Оформить заказ" Background="#FFD8D8D8" Grid.RowSpan="2"/>
         <TextBlock Text="Корзина"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"

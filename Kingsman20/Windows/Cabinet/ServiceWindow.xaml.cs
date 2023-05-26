@@ -23,16 +23,23 @@ namespace Kingsman20.Windows.Cabinet
         {
             InitializeComponent();
             GetListService();
+            if (ClassHelper.UserDataClass.Staff.PositionID == 2)
+            {
+                Spisok.Visibility = Visibility.Collapsed;
+            }
         }
         private void GetListService()
         {
             LvService.ItemsSource = ClassHelper.EF.Context.Service.ToList();
         }
 
+        
+
 
 
         private void Spisok_Click(object sender, RoutedEventArgs e)
         {
+
            
                 AddServiceWindow addServiceWindow = new AddServiceWindow();
                 addServiceWindow.ShowDialog();
@@ -43,10 +50,7 @@ namespace Kingsman20.Windows.Cabinet
 
     
 
-        private void LvService_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+      
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
@@ -79,6 +83,11 @@ namespace Kingsman20.Windows.Cabinet
         {
             CartWindow cartWindow = new CartWindow();
             cartWindow.ShowDialog();
+        }
+
+        private void LvService_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
